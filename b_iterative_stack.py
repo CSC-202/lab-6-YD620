@@ -42,7 +42,7 @@ class Stack:
         return values
 
 
-# SOLUTIONS
+# SOLUTIONS1
 # output: an empty stack
 def initialize() -> Stack:
     return Stack()
