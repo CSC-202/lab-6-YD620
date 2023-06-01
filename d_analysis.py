@@ -16,7 +16,7 @@ import c_iterative_queue as Queue_iter
 import c_recursive_queue as Queue_rec
 
 # PLOT CONFIG
-plt.suptitle('Stapleton - Lab 6 Analysis')
+plt.suptitle('Ye - Lab 6 Analysis')
 
 # CONSTANTS
 N_TRIALS = 100  # TODO run on 20 trials
@@ -314,14 +314,39 @@ for experiment in RESULTS:
 
 # YOUR CODE GOES BELOW
 ## LIST
-
+plt.subplot(1,3,1)
+plt.bar('back', RESULTS['back  (i)'])
+plt.bar('front', RESULTS['front (i)'])
+plt.bar('fib', RESULTS['back  (r)'])
+plt.bar('front', RESULTS['front (r)'])
+plt.legend(['back  (i)', 'front (i)','back  (r)','front (r)'])
+plt.xticks([])
+plt.yticks([])
+plt.xlabel('List')
 
 ## STACK
-
+plt.subplot(1,3,2)
+plt.bar('push', RESULTS['push  (i)'])
+plt.bar('pop', RESULTS['pop   (i)'])
+plt.bar('push', RESULTS['push  (r)'])
+plt.bar('pop', RESULTS['pop   (r)'])
+plt.legend(['push  (i)', 'pop (i)','push  (r)','pop (r)'])
+plt.xticks([])
+plt.yticks([])
+plt.xlabel('Stack')
 
 ## QUEUE
+plt.subplot(1,3,3)
+plt.bar('enq', RESULTS['enq   (i)'])
+plt.bar('deq', RESULTS['deq   (i)'])
+plt.bar('enq', RESULTS['enq   (r)'])
+plt.bar('deq', RESULTS['deq   (r)'])
+plt.legend(['enq  (i)', 'deq (i)','enq  (r)','deq (r)'])
+plt.xticks([])
+plt.yticks([])
+plt.xlabel('Queue')
 
 
 ## SAVE FIGURE
-plt.savefig('./figs/stapleton_lab6_analysis.png')
+plt.savefig('./figs/Ye_lab6_analysis.png')
 plt.show()
